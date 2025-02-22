@@ -13,7 +13,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
   }
 });
 
-
 function logout() {
   localStorage.removeItem("isLoggedIn");
+  window.location.href = "/authencation/login.html";
 }
