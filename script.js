@@ -27,4 +27,5 @@ const container = document.querySelector(".container");
 toggleButton.addEventListener("click", () => {
   sidebar.classList.toggle("close");
   container.classList.toggle("sidebar-closed");
+  toggleButton.classList.toggle("rotate180");
 });

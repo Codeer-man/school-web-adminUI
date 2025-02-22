@@ -124,10 +124,17 @@ body {
   border-radius: 0.5rem;
   background: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 #toggle-btn:hover {
   background-color: var(--line-clr);
 }
+
+.rotate180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
 /* right side  */
 main {
   padding: min(30px, 7%);
@@ -242,5 +249,4 @@ p {
       margin-left: 30px;
     }
   }
- 
 }
