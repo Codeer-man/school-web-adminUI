@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Admin Panel</title>
+
     <link rel="stylesheet" href="style.css" />
     <script>
       if (localStorage.getItem("isLoggedIn") !== "true") {
@@ -11,6 +12,7 @@
       }
     </script>
   </head>
+
   <body>
     <aside class="sidebar">
       <ul>
@@ -30,7 +32,7 @@
         </button>
 
         <li>
-          <a href="../home.html">
+          <a href="/home.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -46,7 +48,7 @@
           >
         </li>
         <li>
-          <a href="../dashboard/index.html">
+          <a href="./dashboard/index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -136,7 +138,7 @@
           </ul>
         </li>
         <li>
-          <a href="../Profile/index.html">
+          <a href="./Profile/index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -167,7 +169,7 @@
             <button
               class="logout"
               onclick="logout()"
-              style="background-color: #222533; color: #e6e6ef; border: none"
+              style="background-color: #11121a; color: #e6e6ef; border: none"
             >
               <span>logout</span>
             </button>
@@ -186,15 +188,8 @@
         efficitur lobortis, ante libero convallis metus, eget egestas lorem
         neque nec odio. Donec at tortor turpis.
       </p>
-      <p>
-        Morbi malesuada, neque sed cursus tincidunt, tortor odio feugiat felis,
-        non mollis eros ante at elit. Sed eget lectus et velit pretium rhoncus
-        at ut purus. Nunc non metus eu ante tempor pharetra non sit amet turpis.
-        Aliquam erat volutpat. Curabitur placerat, felis a rutrum posuere, elit
-        felis consequat mi, eget elementum justo eros at nunc.
-      </p>
     </main>
     <script src="script.js"></script>
-    <script src="/auth.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>

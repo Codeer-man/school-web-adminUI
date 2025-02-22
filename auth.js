@@ -7,7 +7,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
   if (username === "admin" && password === "password") {
     localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "/index.html";
+    window.location.href = "/home.html";
   } else {
     alert("Invalid credentials");
   }
@@ -15,5 +15,5 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 
 function logout() {
   localStorage.removeItem("isLoggedIn");
-  window.location.href = "/authencation/login.html";
+  window.location.href = "/index.html";
 }
