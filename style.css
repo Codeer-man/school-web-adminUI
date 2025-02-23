@@ -7,8 +7,19 @@
   --text-clr: #e6e6ef;
   --accent-clr: #5e63ff;
   --secondary-text-clr: #b0b3c1;
+  --base-clr2: #20c997;
+  --base-clr3: #0d6efd;
 }
-
+.lightMode {
+  --base-clr: #e6e6ef;
+  --line-clr: #4b5563;
+  --hover-clr: #fff3cd;
+  --text-clr: #11121a;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+  --base-clr2: #20c997;
+  --base-clr3: #0d6efd;
+}
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +44,50 @@ body {
   background-color: var(--base-clr);
   color: var(--text-clr);
   margin-top: 30px;
+}
+.theme-changer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+  > button {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* right: 10%; */
+    top: 5%;
+    transition: background-color 300ms ease-in-out;
+
+    > svg:hover {
+      background-color: var(--hover-clr);
+    }
+  }
+}
+.theme-changer button:hover {
+  background-color: var(--hover-clr);
+}
+.theme-changer svg {
+  background-color: var(--base-clr);
+  fill: var(--text-clr);
+}
+.theme-changer svg:first-child {
+  display: none;
+}
+.darkmode .theme-changer svg:last-child {
+  display: none;
+}
+.darkmode .theme-changer svg:first-child {
+  display: block;
 }
 
 .sidebar {

@@ -178,23 +178,138 @@
 
     <!-- right side  -->
     <main class="container">
-      <h3>Main Content</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        auctor, elit ac sollicitudin venenatis, est risus aliquet magna, sit
-        amet fringilla nulla purus eu felis. Vivamus sollicitudin, turpis ut
-        efficitur lobortis, ante libero convallis metus, eget egestas lorem
-        neque nec odio. Donec at tortor turpis.
-      </p>
-      <p>
-        Morbi malesuada, neque sed cursus tincidunt, tortor odio feugiat felis,
-        non mollis eros ante at elit. Sed eget lectus et velit pretium rhoncus
-        at ut purus. Nunc non metus eu ante tempor pharetra non sit amet turpis.
-        Aliquam erat volutpat. Curabitur placerat, felis a rutrum posuere, elit
-        felis consequat mi, eget elementum justo eros at nunc.
-      </p>
+      <div class="theme-changer">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="dashboard">
+        <header class="header">
+          <h1>Dashboard</h1>
+          <p>Example dashboard overview and content summary</p>
+          <div class="date-picker">
+            <span>📅 Date: month xx.xxxx - month xx,xxxx</span>
+          </div>
+        </header>
+
+        <div class="cards">
+          <div class="card welcome-card">
+            <h2>Welcome to SB Admin Pro!</h2>
+            <p>
+              Browse our fully designed UI toolkit! Browse our prebuilt app
+              pages, components, and utilities, and be sure to look at our full
+              documentation!
+            </p>
+            <img src="illustration.png" alt="Illustration" />
+          </div>
+
+          <div class="card activity-card">
+            <h3>Recent Activity</h3>
+            <ul>
+              <li>
+                <span class="green-dot"></span> 27 min - New order placed!
+                <b>Order #2912</b> has been successfully placed.
+              </li>
+              <li>
+                <span class="blue-dot"></span> 58 min - Your
+                <b>weekly report</b> has been generated.
+              </li>
+              <li>
+                <span class="purple-dot"></span> 2 hrs - New user
+                <b>Valerie Luna</b> has registered.
+              </li>
+              <li>
+                <span class="gray-dot"></span> 1 day - Server activity monitor
+                alert
+              </li>
+              <li>
+                <span class="green-dot"></span> 1 day - New order placed!
+                <b>Order #2911</b> successfully placed.
+              </li>
+              <li>
+                <span class="blue-dot"></span> 1 day - Details for
+                <b>Marketing and Planning Meeting</b> updated.
+              </li>
+              <li>
+                <span class="green-dot"></span> 2 days - New order placed!
+                <b>Order #2910</b> successfully placed.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card progress-card">
+            <h3>Progress Tracker</h3>
+            <div class="progress-item">
+              <p>Server Migration <span>20%</span></p>
+              <div class="progress-bar red" style="width: 20%"></div>
+            </div>
+            <div class="progress-item">
+              <p>Sales Tracking <span>40%</span></p>
+              <div class="progress-bar orange" style="width: 40%"></div>
+            </div>
+            <div class="progress-item">
+              <p>Customer Database <span>60%</span></p>
+              <div class="progress-bar blue" style="width: 60%"></div>
+            </div>
+            <div class="progress-item">
+              <p>Payout Details <span>80%</span></p>
+              <div class="progress-bar cyan" style="width: 80%"></div>
+            </div>
+            <div class="progress-item">
+              <p>Account Setup <span>Complete!</span></p>
+              <div class="progress-bar green" style="width: 100%"></div>
+            </div>
+            <button class="btn">Visit Task Center →</button>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-box blue">
+            <p>Earnings (Monthly)</p>
+            <h2>$40,000</h2>
+            <button>View Report</button>
+          </div>
+          <div class="stat-box orange">
+            <p>Earnings (Annual)</p>
+            <h2>$215,000</h2>
+            <button>View Report</button>
+          </div>
+          <div class="stat-box green">
+            <p>Task Completion</p>
+            <h2>24</h2>
+            <button>View Tasks</button>
+          </div>
+          <div class="stat-box red">
+            <p>Pending Requests</p>
+            <h2>17</h2>
+            <button>View Requests</button>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="script.js"></script>
+    <script src="../lightMode.js"></script>
     <!-- <script src="/auth.js"></script> -->
   </body>
 </html>

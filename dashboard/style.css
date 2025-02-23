@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 :root {
   --base-clr: #11121a;
   --line-clr: #42434a;
@@ -7,6 +6,18 @@
   --text-clr: #e6e6ef;
   --accent-clr: #5e63ff;
   --secondary-text-clr: #b0b3c1;
+  --base-clr2: #20c997;
+  --base-clr3: #0d6efd;
+}
+.lightMode {
+  --base-clr: #e6e6ef;
+  --line-clr: #4b5563;
+  --hover-clr: #fff3cd;
+  --text-clr: #11121a;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+  --base-clr2: #20c997;
+  --base-clr3: #0d6efd;
 }
 
 * {
@@ -34,7 +45,50 @@ body {
   color: var(--text-clr);
   margin-top: 30px;
 }
+.theme-changer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
 
+  > button {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* right: 10%; */
+    top: 5%;
+    transition: background-color 300ms ease-in-out;
+
+    > svg:hover {
+      background-color: var(--hover-clr);
+    }
+  }
+}
+.theme-changer button:hover {
+  background-color: var(--hover-clr);
+}
+.theme-changer svg {
+  background-color: var(--base-clr);
+  fill: var(--text-clr);
+}
+.theme-changer svg:first-child {
+  display: none;
+}
+.darkmode .theme-changer svg:last-child {
+  display: none;
+}
+.darkmode .theme-changer svg:first-child {
+  display: block;
+}
 .sidebar {
   height: 100vh;
   width: 250px;
@@ -158,6 +212,182 @@ main p {
 h2,
 p {
   margin-top: 1em;
+}
+
+.dashboard {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.header {
+  text-align: center;
+  background: var(--base-clr2);
+  color: var(--text-clr);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.date-picker {
+  background: white;
+  color: black;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--base-clr3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.welcome-card img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.activity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-card li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.green-dot,
+.blue-dot,
+.purple-dot,
+.gray-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.green-dot {
+  background: green;
+}
+.blue-dot {
+  background: blue;
+}
+.purple-dot {
+  background: purple;
+}
+.gray-dot {
+  background: gray;
+}
+
+.progress-item {
+  margin-bottom: 10px;
+}
+
+.progress-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: lightgray;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  height: 100%;
+  display: block;
+}
+
+.red {
+  background: red;
+}
+.orange {
+  background: orange;
+}
+.blue {
+  background: blue;
+}
+.cyan {
+  background: cyan;
+}
+.green {
+  background: green;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.stat-box {
+  width: 23%;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box button {
+  border: none;
+  padding: 8px;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.blue {
+  background: #6f42c1;
+}
+.orange {
+  background: orange;
+}
+.green {
+  background: green;
+}
+.red {
+  background: red;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards,
+  .stats {
+    flex-direction: column;
+  }
+
+  .card,
+  .stat-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 800px) {
