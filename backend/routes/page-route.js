@@ -1,16 +1,8 @@
 const express = require("express");
-const {
-  updateBanner,
-  updatePrincipalMessage,
-  createBanner,
-  getBanner,
-} = require("../controller/pages/home");
+const CreateBlog = require("../controller/blog-controller");
 
 const route = express.Router();
 
-route.post("/create", createBanner);
-route.get("dannerData", getBanner);
-route.patch("/UpdateBanner/:id", updateBanner);
-route.put("/PrincipalMsg/:id", updatePrincipalMessage);
+route.post("/create", CreateBlog);
 
 module.exports = route;
