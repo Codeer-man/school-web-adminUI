@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <!-- form blog css  -->
-    <link rel="stylesheet" href="./admin-home/style.css" />
+    <link rel="stylesheet" href="./form/form.css" />
 
     <!-- <script>
       if (localStorage.getItem("isLoggedIn") !== "true") {
@@ -157,7 +157,7 @@
           >
         </li>
         <li>
-          <a>
+          <a style="cursor: pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -169,13 +169,7 @@
                 d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"
               />
             </svg>
-            <button
-              class="logout"
-              onclick="logout()"
-              style="background-color: #11121a; color: #e6e6ef; border: none"
-            >
-              <span>logout</span>
-            </button>
+            <button class="logout" onclick="logout()">Logout</button>
           </a>
         </li>
       </ul>
@@ -210,31 +204,43 @@
         </button>
       </div>
 
-      <form id="BlogForm">
-        <h2>Add School Events</h2>
+      <div class="form">
+        <form id="BlogForm">
+          <h2>Add School Events</h2>
 
-        <label for="title">Title </label>
-        <input type="text" placeholder="Title" id="title" name="title" />
-        <label for="event">Event </label>
-        <input type="text" placeholder="Event" id="event" name="event" />
-        <label for="author">Author </label>
-        <input type="text" placeholder="Author" id="author" name="author" />
-        <label for="title">Message </label>
-        <textarea
-          type="text"
-          placeholder="Message"
-          name="message"
-          id="message"
-        ></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
+          <label for="title">Title </label>
+          <input type="text" placeholder="Title" id="title" name="title" />
+          <label for="event">Event </label>
+          <input type="text" placeholder="Event" id="event" name="event" />
+          <label for="author">Author </label>
+          <input type="text" placeholder="Author" id="author" name="author" />
+          <label for="title">Message </label>
+          <textarea
+            type="text"
+            placeholder="Message"
+            name="message"
+            id="message"
+          ></textarea>
+          <label for="imageUpload">Upload an image</label>
+          <input type="file" id="imageUpload" name="image" accept="image" />
+
+          <!-- image preview  -->
+          <img
+            id="preview"
+            style="display: none; width: 100px; height: 100px; margin-top: 10px"
+          />
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
     </main>
     <script src="script.js"></script>
     <!-- theme changer  -->
     <script src="/lightMode.js"></script>
     <!-- connecting the backend with the frontend  -->
     <script src="./admin-home/script.js"></script>
+    <!-- form javascript for image preview -->
+    <script src="/form/form.js"></script>
+
     <!-- <script src="auth.js"></script> -->
   </body>
 </html>
