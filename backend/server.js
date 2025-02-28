@@ -1,12 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require("morgan");
 
 const pageRoute = require("./routes/page-route");
+const imageRoute = require("./routes/image-routes");
 
 const app = express();
 
@@ -22,6 +23,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use("/api/home", pageRoute);
+app.use("/api/image", imageRoute);
 
 const PORT = 3000;
 mongoose
