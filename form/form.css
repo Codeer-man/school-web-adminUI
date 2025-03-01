@@ -199,3 +199,6 @@ textarea:focus {
   background: var(--btn-hover);
   transform: scale(1.1);
 }
+@media (min-width: 768px) {
+  
+}

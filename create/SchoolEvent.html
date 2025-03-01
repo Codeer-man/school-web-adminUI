@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <!-- form blog css  -->
+    <link rel="stylesheet" href="/form/form.css" />
 
     <!-- <script>
       if (localStorage.getItem("isLoggedIn") !== "true") {
@@ -34,7 +35,7 @@
         </button>
 
         <li>
-          <a href="#">
+          <a href="/index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -50,7 +51,7 @@
           >
         </li>
         <li>
-          <a href="./dashboard/index.html">
+          <a href="/dashboard/index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -140,7 +141,7 @@
           </ul>
         </li>
         <li>
-          <a href="./Profile/index.html">
+          <a href="/Profile/index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -203,31 +204,42 @@
         </button>
       </div>
 
-      <div class="parent">
-        <div class="student">
-          <h3>Student Number</h3>
-          <div>10K+</div>
-        </div>
-        <div class="teacher">
-          <h3>Teacher Number</h3>
-          <div>1K+</div>
-        </div>
-        <div class="div3">
-          <h3>Teacher Number</h3>
-          <div>+12%</div>
-        </div>
-        <div class="div4">
-          <h3>Teacher Number</h3>
-          <div>+4%</div>
-        </div>
+      <div class="form">
+        <form id="BlogForm">
+          <h2>Add School Events</h2>
+
+          <label for="title">Title </label>
+          <input type="text" placeholder="Title" id="title" name="title" />
+          <label for="event">Event </label>
+          <input type="text" placeholder="Event" id="event" name="event" />
+          <label for="author">Author </label>
+          <input type="text" placeholder="Author" id="author" name="author" />
+          <label for="title">Message </label>
+          <textarea
+            type="text"
+            placeholder="Message"
+            name="message"
+            id="message"
+          ></textarea>
+          <label for="imageUpload">Upload an image</label>
+          <input type="file" id="imageUpload" name="image" accept="image" />
+
+          <!-- image preview  -->
+          <img
+            id="preview"
+            style="display: none; width: 100px; height: 100px; margin-top: 10px"
+          />
+          <button class="button" type="submit">Submit</button>
+        </form>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
     <!-- theme changer  -->
     <script src="/lightMode.js"></script>
-    <!-- number increase  -->
-    <script src="/numGrowing.js"></script>
-    <!-- dropdown menu  -->
+    <!-- connecting the backend with the frontend  -->
+    <script src="/admin-home/script.js"></script>
+    <!-- form javascript for image preview -->
+    <script src="/form/form.js"></script>
 
     <!-- <script src="auth.js"></script> -->
   </body>
