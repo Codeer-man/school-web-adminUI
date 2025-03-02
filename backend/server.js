@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require("morgan");
 
+const UploadImage = require("./middleware/upload-Middleware")
 const pageRoute = require("./routes/page-route");
 const imageRoute = require("./routes/image-routes");
 
@@ -24,6 +25,8 @@ app.use(cors(corsOptions));
 
 app.use("/api/home", pageRoute);
 app.use("/api/image", imageRoute);
+
+api.use(UploadImage)
 
 const PORT = 3000;
 mongoose
